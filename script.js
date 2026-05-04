@@ -79,7 +79,14 @@ const galaxyParameters = {
   outsideColor: new THREE.Color(0x48b8b8),
 };
 
-const defaultHeartImages = Array.from({ length: 2 }, (_, i) => `images/img${i + 1}.jpg`);
+// Tambahkan lebih banyak file gambar di folder `images/` seperti img3.jpg, img4.jpg, dst.
+// Kalau file-file tersebut ada, sistem akan otomatis memprosesnya sebagai grup tambahan.
+const defaultHeartImages = [
+  'images/img1.jpg',
+  'images/img2.jpg',
+  'images/img3.jpg',
+  'images/img4.jpg'
+];
 
 const heartImages = [
   ...(window.dataCCD?.data?.heartImages || []),
@@ -587,7 +594,7 @@ scene.add(planet);
 
 //Ganti Deskripsi Planet
 const ringTexts = [
-  'Galaxy of love From ...',//untuk deskripsi planet layer 1
+  'Aprilia Dwi Celsiana',//untuk deskripsi planet layer 1
   "I love you",//untuk deskripsi planet layer 2
   "♡Happy Girlfriend day♡",//untuk deskripsi planet layer 3
   "01/08/2025",//untuk deskripsi planet layer 4
